@@ -16,23 +16,24 @@ public class CountBalancedStrings {
          {
             j++;
          }
-         
          else if (str1.charAt(i) == 'L')
          {
             l++;
          }
       
-         if (j == l)
+        //solve returning result
+         if (j == l) 
          {
             result++;
          }
       }
       return result;
    }
-  
-  
+ 
    public static void main(String[] args) {
-      String str1 = "RLRRRLLRLL";
+      Scanner sc = new Scanner(System.in);
+      System.out.print("Enter a bunch of 'L's' & 'R's': ");
+      String str1 =sc.nextLine();
       int n = str1.length();
       System.out.print(balanceStr(str1, n) + "\n");
    }
